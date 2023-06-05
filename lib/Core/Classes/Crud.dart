@@ -1,6 +1,5 @@
 // ignore_for_file: file_names
 import 'package:api_test/Core/Functions/CheckInternet.dart';
-import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -22,9 +21,7 @@ class Crud {
       }
         
       } catch (e) {
-        print(11);
-        e.printError();
-        return "TryCatchError";
+        return "TryCatchError *** ${e.toString()}";
       }
      
   }

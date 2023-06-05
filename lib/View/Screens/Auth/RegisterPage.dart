@@ -28,7 +28,7 @@ class RegisterPage extends StatelessWidget {
                       title: "Username",
                       myValidator: (txt) =>
                           inputValidator(txt!, "Username", 50, 10),
-                      mycontroller: controller.email,
+                      mycontroller: controller.username,
                       icon: const Icon(Icons.person),
                     ),
                     const SizedBox(height: 20),

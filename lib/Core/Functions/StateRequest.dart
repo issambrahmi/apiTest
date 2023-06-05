@@ -2,11 +2,13 @@
 
 statusVal(var data) {
   if (data is Map) {
-    if (data["state" == "success"]) {
-      return "success";
+    if (data["state"] == "success") {
+      return "Success";
     } else {
-      return "fail";
+      return "Fail";
     }
+  }else if(data == "Server" || data == "Internet") {
+      return data;
   }
-  return data;
+  return "Fail";
 }

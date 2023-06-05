@@ -15,18 +15,17 @@ class LoginController extends GetxController {
 
   String state = "";
 
-  login() {
+  login() async {
     if (frm.currentState!.validate()) {
       Crud crud = Crud();
       state = "Loading";
       update(); // **
-      var res = crud.postData(loginLink, {
-        "user_email": "brahmiissam90@gmail.com",
-        "user_password": "agadir13"
+      var res = await crud.postData(loginLink, {
+        "user_email": email.text.trim(),
+        "user_password": password.text.trim()
       });
-      print(res);
       res = statusVal(res);
-      if (res == "succes") {
+      if (res == "Success") {
         Get.offAll(() => HomePage());
       }
     }
