@@ -38,6 +38,9 @@ dependencies:
   get: ^4.6.5
   http: ^1.0.0
   jwt_decoder: ^2.0.1
+  flash: ^3.0.5+1
+  shared_preferences: ^2.1.1
+  
 
 dev_dependencies:
   flutter_test:
